@@ -20,3 +20,13 @@ Para generar los gráficos poblacionales, sigue las siguientes instrucciones en 
 cd application
 python3 main.py
 ```
+
+# App Project
+
+```sh
+git clone
+cd application
+source app/bin/activate
+pip3 install -r requirements.txt
+python3 main.py
+```
