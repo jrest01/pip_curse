@@ -1,4 +1,34 @@
 import store
+from fastapi import  FastAPI
+from fastapi.responses import HTMLResponse
+
+app = FastAPI()
+
+
+@app.get('/html', response_class=HTMLResponse)
+async def read_items():
+    return """
+    <html>
+        <head>
+            <title>Pruebas en FastAPI</title>
+        </head>
+        <body>
+            <h1>Pagina de pruebas con FastAPI</h1>
+            <p>Parrafo en FastAPI</p>
+        </body>
+    </html>
+    """
+
+
+
+@app.get('/')
+def get_list():
+    return [1,2,3,4,5,]
+    
+
+@app.get('/contact')
+def get_list():
+    return {'name'  : 'Julian'}
 
 
 def run():
